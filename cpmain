@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ $# -ne 1 ]; then
+  echo "usage: cpmain <revision-name>" 1>&2
+  exit 1
+fi
+
+cp `acc config-dir`/cpp/main.cpp main.${1}.cpp
+echo -e "\n// STARTED: $(date '+%Y/%m/%d %H:%M:%S')" >> $_

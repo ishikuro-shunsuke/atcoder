@@ -74,3 +74,22 @@ Forward the next task
 # int the contest directory
 $ acc add
 ```
+
+## Scripts
+
+These scripts enable to handle revisions for reviewing previous tasks.
+
+### cpmain
+
+```bash
+# cp `acc config-dir`/cpp/main.cpp ./main.2.cpp
+$ cpmain 2
+```
+
+### cts
+
+```bash
+# compile, local test, and submit main.2.cpp
+$ cts 2
+```
+
