@@ -19,7 +19,7 @@ int main() {
                    i == 1 ? INF :
                    dp.at(i-2) + abs(h.at(i) - h.at(i-2)));
   }
-  cout << dp.at(N-1) << endl;
+  cout << dp.back() << endl;
   return 0;
 }
 
