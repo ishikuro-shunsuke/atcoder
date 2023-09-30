@@ -2,73 +2,52 @@ My C++ code of AtCoder problems.
 
 ## Environment
 
-```bash
-$ npm install -g atcoder-cli
-$ pip3 install online-judge-tools
-$ mkdir -p `acc config-dir`/cpp
-$ confd=$_
-$ cat  > $confd/template.json <<EOF
-{
-  "task":{
-    "program": ["main.cpp"],
-    "submit": "main.cpp"
-  }
-}
-EOF
-$ cat  > $confd/main.cpp <<EOF
-#include<bits/stdc++.h>
-using namespace std;
-int main() {
+1. Launch DevContainer on VS Code.
+2. Assign utility tasks to keybindings.json:
 
-}
-EOF
-$ acc config default-template cpp
-$ mkdir -p ~/.local/include/bits
-$ cat > $_/stdc++.h << EOF
-#include <iostream> // cout, endl, cin
-#include <string> // string, to_string, stoi
-#include <vector> // vector
-#include <algorithm> // min, max, swap, sort, reverse, lower_bound, upper_bound
-#include <utility> // pair, make_pair
-#include <tuple> // tuple, make_tuple
-#include <cstdint> // int64_t, int*_t
-#include <cstdio> // printf
-#include <map> // map
-#include <queue> // queue, priority_queue
-#include <set> // set
-#include <stack> // stack
-#include <deque> // deque
-#include <unordered_map> // unordered_map
-#include <unordered_set> // unordered_set
-#include <bitset> // bitset
-#include <cctype> // isupper, islower, isdigit, toupper, tolower
-EOF
-$ echo 'export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:~/.local/include/' >> ~/.bashrc
+```json
+[
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.tasks.runTask",
+    "when": "Test AtCoder C++ Code with oj"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.tasks.runTask",
+    "when": "Submit AtCoder C++ Code with acc"
+  }
+]
 ```
 
 ## My routin
 
-Log in
+### Login
 
 ```bash
+$ cd contests
 $ acc login
 $ oj login https://atcoder.jp
 ```
 
-Join a new contest
+### Join a new contest
 
 ```bash
 $ acc new <contest name (e.g. abs)>
 ```
 
-Submit
+### Test and submit
 
-```bash
-# in the task directory which is made by acc
-$ g++ main.cpp && oj t -d tests && acc s
-```
+VS Code
+Run test script:
+- `Ctrl + Shift + P` -> Tasks: Run Test Task -> "Test AtCoder C++ Code with oj"
+- or shortcut key: `Ctrl + Shift + T` 
 
-Forward the next task
+Submit an answer:
+- `Ctrl + Shift + P` -> Tasks: Run Task -> "Submit AtCoder C++ Code with acc"
+- or shortcut key: `Ctrl + Shift + S`
+
+### Forward the next task
 
 ```bash
 # int the contest directory
@@ -85,11 +64,3 @@ These scripts enable to handle revisions for reviewing previous tasks.
 # cp `acc config-dir`/cpp/main.cpp ./main.2.cpp
 $ cpmain 2
 ```
-
-### cts
-
-```bash
-# compile, local test, and submit main.2.cpp
-$ cts 2
-```
-

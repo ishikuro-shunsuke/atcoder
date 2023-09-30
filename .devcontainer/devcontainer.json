@@ -1,0 +1,16 @@
+{
+  "name": "AtCoder",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-vscode.cpptools"],
+      "settings": {
+        "C_Cpp.clang_format_fallbackStyle": "Google",
+        "C_Cpp.default.includePath": ["~/.local/include/bits"],
+        "C_Cpp.default.cppStandard": "gnu++17"
+      }
+    }
+  }
+}

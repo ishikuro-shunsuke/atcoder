@@ -1,0 +1,48 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build AtCoder C++ Code",
+      "type": "process",
+      "command": "g++",
+      "args": [
+        "-std=gnu++17",
+        "-O2",
+        "-Wall",
+        "${file}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "group": "build",
+      "problemMatcher": "$gcc",     
+      "presentation": {
+        "clear": true
+      }
+    },
+    {
+      "label": "Test AtCoder C++ Code with oj",
+      "type": "process",
+      "dependsOn": ["buildAtCoderProblem"],
+      "command": "oj",
+      "args": [
+        "t",
+        "-d",
+        "tests"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "group": "test",
+    },
+    {
+      "label": "Submit AtCoder C++ Code with acc",
+      "type": "shell",
+      "dependsOn": ["testAtCoderProblem"],
+      "command": "echo -e \"// PASSED : $(date '+%Y/%m/%d %H:%M:%S')\" >> ${file} && acc s ${file}",
+      "options": {
+        "cwd": "${fileDirname}"
+      }
+    }
+  ]
+}
