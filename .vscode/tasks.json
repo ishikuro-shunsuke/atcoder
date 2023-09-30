@@ -15,7 +15,7 @@
         "cwd": "${fileDirname}"
       },
       "group": "build",
-      "problemMatcher": "$gcc",     
+      "problemMatcher": "$gcc",
       "presentation": {
         "clear": true
       }
@@ -23,7 +23,9 @@
     {
       "label": "Test AtCoder C++ Code with oj",
       "type": "process",
-      "dependsOn": ["buildAtCoderProblem"],
+      "dependsOn": [
+        "Build AtCoder C++ Code"
+      ],
       "command": "oj",
       "args": [
         "t",
@@ -33,15 +35,20 @@
       "options": {
         "cwd": "${fileDirname}"
       },
-      "group": "test",
+      "group": "test"
     },
     {
       "label": "Submit AtCoder C++ Code with acc",
       "type": "shell",
-      "dependsOn": ["testAtCoderProblem"],
-      "command": "echo -e \"// PASSED : $(date '+%Y/%m/%d %H:%M:%S')\" >> ${file} && acc s ${file}",
+      "dependsOn": [
+        "Test AtCoder C++ Code with oj"
+      ],
+      "command": "echo -e \"// SUBMITTED: $(date '+%Y/%m/%d %H:%M:%S')\" >> ${file} && acc s ${file}",
       "options": {
         "cwd": "${fileDirname}"
+      },
+      "presentation": {
+        "focus": true
       }
     }
   ]

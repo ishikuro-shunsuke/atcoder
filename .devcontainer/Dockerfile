@@ -1,5 +1,6 @@
 FROM debian:stable-slim
 
+ENV TZ=Asia/Tokyo
 RUN apt update && apt install -y \
       nodejs \
       npm \

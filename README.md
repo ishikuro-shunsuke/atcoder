@@ -10,12 +10,12 @@ My C++ code of AtCoder problems.
   {
     "key": "ctrl+shift+t",
     "command": "workbench.action.tasks.runTask",
-    "when": "Test AtCoder C++ Code with oj"
+    "args": "Test AtCoder C++ Code with oj"
   },
   {
     "key": "ctrl+shift+s",
     "command": "workbench.action.tasks.runTask",
-    "when": "Submit AtCoder C++ Code with acc"
+    "args": "Submit AtCoder C++ Code with acc"
   }
 ]
 ```
