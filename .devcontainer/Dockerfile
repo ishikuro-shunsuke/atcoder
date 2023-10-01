@@ -17,9 +17,9 @@ RUN groupadd ${USERNAME} && useradd -g ${USERNAME} -s /bin/bash -m ${USERNAME}
 USER vscode
 
 ARG HOME=/home/${USERNAME}
-
 COPY --chown=${USERNAME}:${USERNAME} . ${HOME}
-RUN acc config default-template cpp
 ENV CPLUS_INCLUDE_PATH ${CPLUS_INCLUDE_PATH}:${HOME}/.local/include/
 ENV PATH ${HOME}/.local/bin:${PATH}
 ENV TZ=Asia/Tokyo
+RUN acc config default-template cpp
+RUN echo 'alias c=checkin' >> ${HOME}/.bashrc

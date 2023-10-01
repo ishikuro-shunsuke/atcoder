@@ -33,7 +33,7 @@ ATCODER_PASSWORD=your_atcoder_password
 
 ```bash
 cd contests/
-$ acc new <contest name (e.g. abs)>
+acc new <contest name (e.g. abs)>
 ```
 
 ### Test and submit
@@ -53,16 +53,31 @@ Submit an answer:
 
 ```bash
 # int the contest directory
-$ acc add
+acc add
 ```
 
 ## Scripts
 
-### cpmain
+### checkin
 
-Handle revisions for reviewing previous tasks.
+Add timestamp to the end of `main.cpp` and open by VS Code.
 
 ```bash
-# cp `acc config-dir`/cpp/main.cpp ./main.2.cpp
-$ cpmain 2
+checkin
+```
+
+Initialize next revision for reviewing previous tasks.
+
+```bash
+# cp `acc config-dir`/cpp/main.cpp ./main.2.cpp and chekckin
+checkin 2
+```
+
+`checkin` has alias `c`
+
+```bash
+# same as checkin
+c
+# same as checkin 2
+c 2
 ```

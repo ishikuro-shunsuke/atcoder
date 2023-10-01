@@ -1,0 +1,12 @@
+#!/bin/sh
+
+timestamp="\n// STARTED: $(date '+%Y/%m/%d %H:%M:%S')"
+
+if [ -z "$1" ]; then
+  echo $timestamp >> main.cpp
+  exec code main.cpp
+fi
+
+cp `acc config-dir`/cpp/main.cpp main.${1}.cpp
+echo $timestamp >> main.${1}.cpp
+exec code main.${1}.cpp
