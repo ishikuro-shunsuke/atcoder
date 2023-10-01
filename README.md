@@ -29,17 +29,10 @@ ATCODER_PASSWORD=your_atcoder_password
 
 ## My routin
 
-### Login
-
-```bash
-$ cd contests
-$ acc login
-$ oj login https://atcoder.jp
-```
-
 ### Join a new contest
 
 ```bash
+cd contests/
 $ acc new <contest name (e.g. abs)>
 ```
 
@@ -65,9 +58,9 @@ $ acc add
 
 ## Scripts
 
-These scripts enable to handle revisions for reviewing previous tasks.
-
 ### cpmain
+
+Handle revisions for reviewing previous tasks.
 
 ```bash
 # cp `acc config-dir`/cpp/main.cpp ./main.2.cpp
