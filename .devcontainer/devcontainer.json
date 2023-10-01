@@ -3,6 +3,8 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "runArgs": ["--env-file", ".devcontainer/.env"],
+  "postStartCommand": "/bin/sh -c atcoder_login",
   "customizations": {
     "vscode": {
       "extensions": ["ms-vscode.cpptools"],

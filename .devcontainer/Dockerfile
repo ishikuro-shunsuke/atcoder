@@ -1,11 +1,11 @@
 FROM debian:stable-slim
 
-ENV TZ=Asia/Tokyo
 RUN apt update && apt install -y \
       nodejs \
       npm \
       python3 \
       python3-pip \
+      expect \
       gdb \
       g++
 
@@ -22,3 +22,4 @@ COPY --chown=${USERNAME}:${USERNAME} . ${HOME}
 RUN acc config default-template cpp
 ENV CPLUS_INCLUDE_PATH ${CPLUS_INCLUDE_PATH}:${HOME}/.local/include/
 ENV PATH ${HOME}/.local/bin:${PATH}
+ENV TZ=Asia/Tokyo

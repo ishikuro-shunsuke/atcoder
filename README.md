@@ -2,8 +2,15 @@ My C++ code of AtCoder problems.
 
 ## Environment
 
-1. Launch DevContainer on VS Code.
-2. Assign utility tasks to keybindings.json:
+1. Set .devcontainer/.env
+
+```shell
+ATCODER_USERNAME=your_atcoder_username
+ATCODER_PASSWORD=your_atcoder_password
+```
+
+2. Launch DevContainer on VS Code.
+3. Assign utility tasks to keybindings.json:
 
 ```json
 [
@@ -40,10 +47,12 @@ $ acc new <contest name (e.g. abs)>
 
 VS Code
 Run test script:
+
 - `Ctrl + Shift + P` -> Tasks: Run Test Task -> "Test AtCoder C++ Code with oj"
-- or shortcut key: `Ctrl + Shift + T` 
+- or shortcut key: `Ctrl + Shift + T`
 
 Submit an answer:
+
 - `Ctrl + Shift + P` -> Tasks: Run Task -> "Submit AtCoder C++ Code with acc"
 - or shortcut key: `Ctrl + Shift + S`
 
