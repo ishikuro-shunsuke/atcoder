@@ -49,6 +49,15 @@ Submit an answer:
 - `Ctrl + Shift + P` -> Tasks: Run Task -> "Submit AtCoder C++ Code with acc"
 - or shortcut key: `Ctrl + Shift + S`
 
+See .vscode/tasks.json.
+
+### Debug with gdb
+
+1. Set break point
+2. Press `F5`
+
+See .vscode/launch.json.
+
 ### Forward the next task
 
 ```bash
