@@ -2,13 +2,17 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Build AtCoder C++ Code",
+      "label": "Debug build AtCoder C++ code",
       "type": "process",
       "command": "g++",
       "args": [
-        "-std=gnu++17",
-        "-O2",
+        "-std=gnu++20",
+        "-ggdb",
+        "-g3",
         "-Wall",
+        "-fconstexpr-depth=2147483647",
+        "-fconstexpr-loop-limit=2147483647",
+        "-fconstexpr-ops-limit=2147483647",
         "${file}"
       ],
       "options": {
@@ -21,10 +25,32 @@
       }
     },
     {
-      "label": "Test AtCoder C++ Code with oj",
+      "label": "Build AtCoder C++ code",
+      "type": "process",
+      "command": "g++",
+      "args": [
+        "-std=gnu++20",
+        "-O2",
+        "-Wall",
+        "-fconstexpr-depth=2147483647",
+        "-fconstexpr-loop-limit=2147483647",
+        "-fconstexpr-ops-limit=2147483647",
+        "${file}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "group": "build",
+      "problemMatcher": "$gcc",
+      "presentation": {
+        "clear": true
+      }
+    },
+    {
+      "label": "Test AtCoder C++ code with oj",
       "type": "process",
       "dependsOn": [
-        "Build AtCoder C++ Code"
+        "Build AtCoder C++ code"
       ],
       "command": "oj",
       "args": [
@@ -38,10 +64,10 @@
       "group": "test"
     },
     {
-      "label": "Submit AtCoder C++ Code with acc",
+      "label": "Submit AtCoder C++ code with acc",
       "type": "shell",
       "dependsOn": [
-        "Test AtCoder C++ Code with oj"
+        "Test AtCoder C++ code with oj"
       ],
       "command": "echo -e \"// SUBMITTED: $(date '+%Y/%m/%d %H:%M:%S')\" >> ${file} && acc s ${file}",
       "options": {

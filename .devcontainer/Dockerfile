@@ -18,7 +18,6 @@ USER vscode
 
 ARG HOME=/home/${USERNAME}
 COPY --chown=${USERNAME}:${USERNAME} . ${HOME}
-ENV CPLUS_INCLUDE_PATH ${CPLUS_INCLUDE_PATH}:${HOME}/.local/include/
 ENV PATH ${HOME}/.local/bin:${PATH}
 ENV TZ=Asia/Tokyo
 RUN acc config default-template cpp

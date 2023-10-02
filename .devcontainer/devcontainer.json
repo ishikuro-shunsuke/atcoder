@@ -10,8 +10,7 @@
       "extensions": ["ms-vscode.cpptools"],
       "settings": {
         "C_Cpp.clang_format_fallbackStyle": "Google",
-        "C_Cpp.default.includePath": ["~/.local/include/bits"],
-        "C_Cpp.default.cppStandard": "gnu++17"
+        "C_Cpp.default.cppStandard": "gnu++20"
       }
     }
   }

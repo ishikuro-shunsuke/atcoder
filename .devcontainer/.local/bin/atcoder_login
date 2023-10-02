@@ -8,8 +8,8 @@ expect password:
 send ${ATCODER_PASSWORD}\n'
 expect eof
 catch wait result
-exit [ lindex $result 3 ]
-" && \
+"
+
 expect -c "
 spawn oj login https://atcoder.jp
 expect Username:
@@ -18,5 +18,4 @@ expect Password:
 send ${ATCODER_PASSWORD}\n
 expect eof
 catch wait result
-exit [ lindex $result 3 ]
 "
