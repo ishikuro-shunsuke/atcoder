@@ -1,6 +1,40 @@
 {
   "editor.formatOnSave": true,
   "files.associations": {
-    "valarray": "cpp"
-  }
+    "valarray": "cpp",
+    "array": "cpp",
+    "atomic": "cpp",
+    "bitset": "cpp",
+    "complex": "cpp",
+    "condition_variable": "cpp",
+    "cwchar": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "exception": "cpp",
+    "fstream": "cpp",
+    "functional": "cpp",
+    "future": "cpp",
+    "initializer_list": "cpp",
+    "iosfwd": "cpp",
+    "istream": "cpp",
+    "mutex": "cpp",
+    "new": "cpp",
+    "ostream": "cpp",
+    "ratio": "cpp",
+    "scoped_allocator": "cpp",
+    "shared_mutex": "cpp",
+    "sstream": "cpp",
+    "stdexcept": "cpp",
+    "streambuf": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "typeindex": "cpp",
+    "string_view": "cpp",
+    "regex": "cpp",
+    "cmath": "cpp",
+    "ranges": "cpp",
+    "source_location": "cpp",
+    "stacktrace": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }
