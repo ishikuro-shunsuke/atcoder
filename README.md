@@ -53,7 +53,7 @@ See .vscode/tasks.json.
 
 ### Debug with gdb
 
-1. Set break point
+1. Add a break point
 2. Press `F5`
 
 See .vscode/launch.json.
@@ -69,7 +69,7 @@ acc add
 
 ### checkin
 
-Add timestamp to the end of `main.cpp` and open by VS Code.
+Add timestamp to the end of `main.cpp` and open it by VS Code.
 
 ```bash
 checkin
@@ -82,7 +82,7 @@ Make a new revision for reviewing a past problem.
 checkin 2
 ```
 
-`checkin` has alias `c`
+`checkin` has an alias `c`
 
 ```bash
 # same as checkin
