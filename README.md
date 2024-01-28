@@ -75,7 +75,7 @@ Add timestamp to the end of `main.cpp` and open by VS Code.
 checkin
 ```
 
-Initialize next revision for reviewing previous tasks.
+Make a new revision for reviewing a past problem.
 
 ```bash
 # cp `acc config-dir`/cpp/main.cpp ./main.2.cpp and chekckin
